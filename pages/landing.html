@@ -1,0 +1,265 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-7">
+            
+            <!-- Login Panel -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        <b>Login!</b>
+                    </p>
+                </div>
+                <div class="panel-body">
+                     <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="court-login-Name">Name</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-login-Name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="court-login-Name">Password</label>
+                            <div class="col-md-10">
+                                <input type="password" class="form-control" id="court-login-Name" placeholder="Password">
+                            </div>
+                        </div>
+                    </form>       
+                </div>
+            </div>
+            
+            <!-- Dashboard -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        Welcome, <b>{{ name }}</b>
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <p>Current Time: {{ system.time | date:'MMM dd yyyy HH:mm:ss a'}}</p>
+                    <p>Current Status: {{ system.status }}</p>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default">Edit Reminders</button>
+                        <button type="button" class="btn btn-default">Other Admin Activities</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Form -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        <b>People Search!</b>
+                    </p>
+                </div>
+                <div class="panel-body">
+                     <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="sr-only" for="court-Search-input">Search People</label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-Search-input" placeholder="Search">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-default" ng-click="notYet()">Submit</button>
+                            </div>
+                        </div>
+                    </form>       
+                </div>
+            </div>
+            
+            <!-- Search Results -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        <b>Query Name</b> Search Results...
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p><a href=""><b>First Name Found</b></a></p>
+                            <p>Stub...</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p><a href=""><b>Second Name Found</b></a></p>
+                            <p>Stub...</p>
+                        </li>
+                        <li class="list-group-item">
+                            <p><a href=""><b>Third Name Found</b></a></p>
+                            <p>Stub...</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Add a Person to the DB -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        <b>Add/Update Person Panel</b> - Switch to Separate Page Later
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="court-AddPerson-name" class="col-md-2 control-label">
+                                Name
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-AddPerson-name" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-caseNumber" class="col-md-2 control-label">
+                                Case Number
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-AddPerson-caseNumber" placeholder="Case Number">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-initialDate" class="col-md-2 control-label">
+                                Initial Date
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-AddPerson-initialDate" placeholder="Initial Court Date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-initialRoom" class="col-md-2 control-label">
+                                Courtroom
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-AddPerson-initialRoom" placeholder="Courtroom">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-phone" class="col-md-2 control-label">
+                                Phone
+                            </label>
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="court-AddPerson-phone" placeholder="Phone Number">
+                                    <div class="input-group-addon" ng-click="notYet()">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-alternateContact" class="col-md-2 control-label">
+                                Alternate
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="court-AddPerson-alternateContact" placeholder="Alternate Contact">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="court-AddPerson-alternatePhone" class="col-md-2 control-label">
+                                Phone
+                            </label>
+                            <div class="col-md-10">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="court-AddPerson-alternatePhone" placeholder="Alternate Contact Phone Number">
+                                    <div class="input-group-addon" ng-click="notYet()">+</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-2 control-label">
+                            </div>
+                            <div class="col-md-10">
+                                <button type="button" class="btn btn-default">Add</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Show People Found Via Search Results -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        <b>Person Name</b>
+                    </p>
+                </div>
+                <div class="panel-body">                    
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p><b>Phone #:</b> (###) ###-####</p>
+                            <p><b>Alternate Contact:</b> Contact Name</p>
+                            <p><b>Phone #:</b> (###) ###-####</p>
+                            <button type="button" class="btn btn-default">Edit Info</button>
+                        </li>
+                        <li class="list-group-item">
+                            <p><b>Case Number:</b> ###-#######-###</p>
+                            <p><b>Initial Court Date:</b> A while ago</p>
+                            <p><b>Upcoming Date:</b> Much too soon!<br></p>
+                            <div>
+                                <b>Reminders: </b>
+                                <div class="btn-group btn-group-sm">    
+                                    <button type="button" class="btn btn-default reminder-confirm">10/13</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">10/20</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">10/27</button>
+                                    <button type="button" class="btn btn-default reminder-sent">11/2</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">11/9</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">11/16</button>
+                                    <button type="button" class="btn btn-default reminder-sent">11/17</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="well">
+                                <p>Green background = confirmed. Yellow background = sent. White background = scheduled. Click on a date above to get info here.</p>
+                                <p><b>Reminder Sent:</b> 10/13</p>
+                                <p><b>Court Date: </b> 11/1</p>
+                                <p><b>Response Received: </b> Yes</p>
+                            </div>
+                        </li>
+                        
+                        <li class="list-group-item">
+                            <p><b>Case Number:</b> ###-#######-###</p>
+                            <p><b>Initial Court Date:</b> A while ago</p>
+                            <p><b>Upcoming Date:</b> Much too soon!<br></p>
+                            <div>
+                                <b>Reminders: </b>
+                                <div class="btn-group btn-group-sm">    
+                                    <button type="button" class="btn btn-default reminder-confirm">10/13</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">10/20</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">10/27</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">11/2</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">11/9</button>
+                                    <button type="button" class="btn btn-default reminder-confirm">11/16</button>
+                                    <button type="button" class="btn btn-default reminder-sent">11/17</button>
+                                    <button type="button" class="btn btn-default reminder-scheduled">11/24</button>
+                                    <button type="button" class="btn btn-default reminder-scheduled">12/1</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="well">
+                                <p>Green background = confirmed. Yellow background = sent. White background = scheduled. Click on a date above to get info here.</p>
+                                <p><b>Reminder Sent:</b> 11/17</p>
+                                <p><b>Court Date: </b> 12/22</p>
+                                <p><b>Response Received: </b> No</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-3">
+            <!-- Show System Alerts -->
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="panel-title">
+                        Alerts!
+                    </p>
+                </div>
+                <div class="panel-body">
+                    <div ng-repeat="alert in system.alerts track by $index">
+                        <h4>{{ alert.title }}</h4>
+                        <p>{{ alert.text }}</p>
+                        <hr ng-if="!$last">
+                    <div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

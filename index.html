@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html ng-app="courtApp" ng-controller="courtController">
+<head>
+    <title>Insert Title Here</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="Insert Description Here">
+    <meta name="abstract" content="Insert Description Here">
+    <meta name="author" content="Insert Author Here">
+    <meta property="og:site_name" content="Insert Title Here">
+    <meta property="og:type" content="website">
+    <!-- Uncomment when finalized
+    <meta property="og:url" content="https://finalsite">
+    -->
+    <meta property="og:title" content="Insert Title Here">
+    <meta property="og:description" content="Insert Description Here">
+    <meta itemprop="name" content="Insert Title Here">
+    <meta itemprop="description" content="Insert Description Here">
+
+    <!-- FavIcon Spam, Fill In Later
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128">        
+    <meta name="application-name" content="Insert Description Here">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favcion/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="favcion/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="favcion/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="favcion/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="favcion/mstile-310x310.png">
+    -->
+    
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    
+    <!-- Add Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script>
+    
+    <!-- Add Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Dev scripts -->
+    <!-- Modules first -->
+    <script src="js/modules.js"></script>
+    <script src="js/modules/systemloop.js"></script>
+
+    <script src="js/routes.js"></script>
+    <script src="js/providers.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    
+    <!-- Add css -->
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="">Link</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Action</a></li>
+                            <li><a href="">Another action</a></li>
+                            <li><a href="">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">Separated link</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Link</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="">Action</a></li>
+                            <li><a href="">Another action</a></li>
+                            <li><a href="">Something else here</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main role="main" aria-labelledby="app-main-header">
+        <!-- Angular SPA transclusion here -->
+        <ng-view></ng-view>
+    </main>
+</body>
+</html>

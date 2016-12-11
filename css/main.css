@@ -1,0 +1,27 @@
+.reminder-confirm {
+    background-color: darkseagreen;
+    border-color: darkseagreen;
+}
+
+.reminder-confirm:hover, .reminder-confirm:focus, .reminder-confirm:active, .reminder-confirm.active, .open > .dropdown-toggle.reminder-confirm {
+    background-color: darkseagreen;
+    border-color: black;
+}
+
+.reminder-confirm:active, .reminder-confirm.active {
+    background-color: darkseagreen !important;
+}
+
+.reminder-sent {
+    background-color: gold;
+    border-color: gold;
+}
+
+.reminder-sent:hover, .reminder-sent:focus, .reminder-sent:active, .reminder-sent.active, .open > .dropdown-toggle.reminder-sent {
+    background-color: gold;
+    border-color: black;
+}
+
+.reminder-sent:active, .reminder-confirm.sent {
+    background-color: gold !important;
+}
